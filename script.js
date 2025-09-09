@@ -1,11 +1,11 @@
 // === Objects ===
 let books = {
-'title' : 'Die Geheimnisse des Ozeans'
-}
+  title: "Die Geheimnisse des Ozeans",
+};
 
 // === Initial FUNKTION ===
 function init() {
-    renderBooks ();
+  renderBooks();
 }
 
 // === RENDER FUNKTIONEN ===
