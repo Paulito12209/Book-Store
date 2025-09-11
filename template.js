@@ -23,6 +23,26 @@ function getBookTemplate(bookImagesIndex) {
                 </div>
               </div>
               <div class="book-info-box-divider"></div>
+              <div class="book-interactions">
+                <div class="book-likes">
+                  <img src="assets/icons/heart-empty.png"
+                       class="like-button"
+                       alt="Like Button"
+                       title="Like Button"
+                  />
+                  <span>${books[bookIndex].likes}</span>
+                </div>
+                <div class="book-comment">
+                  <img src="assets/icons/comment-icon.png"
+                       class="comment-icon"
+                       alt="Commentary"
+                       title="Commentary"
+                  />
+                  <span>Kommentare</span>
+                </div>
+                <div class="comment-box">
+                </div>
+              </div>
             </div>
           </div>
         `;

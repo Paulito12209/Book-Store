@@ -157,6 +157,42 @@ section {
   background-color: #7994a9;
 }
 
+.book-interactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-likes {
+  display: flex;
+  align-self: center;
+  gap: 4px;
+}
+
+.book-likes span {
+  color: #ec5e5c;
+  font-size: 14px;
+}
+
+.like-button {
+  height: 16px;
+}
+
+.book-comment {
+  display: flex;
+  align-self: center;
+  gap: 4px;
+}
+
+.book-comment span {
+  color: #ec5e5c;
+  font-size: 14px;
+}
+
+.comment-icon {
+  height: 16px;
+}
+
 /* === FOOTER === */
 footer {
   background-color: #1e1927;
