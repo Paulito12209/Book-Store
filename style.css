@@ -15,7 +15,7 @@ main {
 }
 
 .paddings {
-  padding: 40px 160px;
+  padding: 40px 120px;
 }
 
 .navigation {
@@ -61,9 +61,103 @@ section {
 }
 
 .wrapper {
-  min-height: 1200px;
+  min-height: 100vh;
+  padding-top: 40px;
 }
 
+.book-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.book-card {
+  height: auto;
+  width: 25%;
+  background: rgba(245, 251, 253, 0.8);
+  border-radius: 20px;
+  padding: 16px;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.book-image-box {
+  height: auto;
+  width: 100%;
+}
+
+.book-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(63, 96, 139, 0.2);
+}
+
+.book-info-box {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0px;
+  gap: 16px;
+}
+
+.book-info {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-info h2 {
+  font-size: 24px;
+  color: #0c395c;
+}
+
+.book-info span {
+  font-size: 18px;
+  color: #577b97;
+  margin: 4px 0px;
+}
+
+.book-info p {
+  font-size: 16px;
+  color: #0c395c;
+}
+
+.book-labels {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+  width: 100%;
+}
+
+.book-tags {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 4px 12px;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 40px rgba(34, 48, 76, 0.15);
+}
+
+.book-tags span {
+  color: #ec5e5c;
+  font-size: 14px;
+}
+
+.book-info-box-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #7994a9;
+}
+
+/* === FOOTER === */
 footer {
   background-color: #1e1927;
   flex-shrink: 0;

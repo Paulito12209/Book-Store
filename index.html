@@ -8,10 +8,9 @@
     <title>Pauls Favourite Books</title>
   </head>
   <body onload="init()">
-    <!-- <body> -->
     <main>
       <nav class="container">
-        <div class="paddings navigation">
+        <div class="navigation paddings">
           <h4><img src="assets/icons/book.svg" alt="LOGO" />Pauls</h4>
           <p>Lieblingsbücher</p>
           <span> ・ get your books here</span>
@@ -19,17 +18,22 @@
       </nav>
     </main>
     <section>
-      <div class="wrapper"></div>
+      <div class="container">
+        <div class="wrapper paddings">
+          <div id="book_container" class="book-container"></div>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="container">
         <div class="paddings footer-content">
           <img class="book-icon" src="assets/icons/book.png" alt="Buch Logo" />
           <h4>Pauls Liblingsbücher</h4>
-          <div id="display_products"></div>
         </div>
       </div>
     </footer>
+    <script src="database.js"></script>
+    <script src="template.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,4 +1,13 @@
 // Buchdatenbank
+let bookImages = [
+  "assets/img/the-productivity-project.png",
+  "assets/img/das-einzige-buch-das-du-ueber-finanzen-lesen-solltest.png",
+  "assets/img/the-para-method.png",
+  "assets/img/building-a-second-brain.png",
+  "assets/img/die-7-wege-zur-effektivität.png",
+  "assets/img/die-1-prozent-methode.png",
+];
+
 let books = [
   {
     id: 1,
@@ -74,32 +83,6 @@ let books = [
     category: "Gewohnheiten",
     summary:
       "Kleine Veränderungen führen zu großen Ergebnissen – ein praktischer Ansatz für nachhaltige Gewohnheiten.",
-    likes: 198,
-    liked: false,
-    comments: [],
-  },
-  {
-    id: 7,
-    title: "Harry Potter und der Stein der Weisen",
-    author: "J.K. Rowling",
-    publisher: "Carlsen Verlag",
-    price: 14.99,
-    category: "Fantasy",
-    summary:
-      "Harry entdeckt die magische Welt von Hogwarts und stellt sich dem dunklen Magier Voldemort.",
-    likes: 198,
-    liked: false,
-    comments: [],
-  },
-{
-    id: 8,
-    title: "Old Shatterhand",
-    author: "Karl May",
-    publisher: "Karl May Verlag",
-    price: 13.99,
-    category: "Abenteuer",
-    summary:
-      "Die Abenteuer von Old Shatterhand und Winnetou im Wilden Westen – Freundschaft, Mut und Gerechtigkeit.",
     likes: 198,
     liked: false,
     comments: [],
