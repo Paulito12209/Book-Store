@@ -1,0 +1,96 @@
+/* 1080px */
+@media (max-width: 1080px) {
+  /* Navigation */
+  .paddings {
+    padding: 40px 64px;
+  }
+
+  .book-card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 940px) {
+  /* Navigation */
+  .paddings {
+    padding: 32px 32px;
+  }
+
+  .book-card {
+    width: 40%;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  /* Navigation */
+  .paddings {
+    padding: 24px 16px;
+  }
+
+  .book-card {
+    width: 50%;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .navigation h4 {
+    font-size: 24px;
+  }
+
+  .navigation h4 img {
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .navigation h4 img:hover {
+    height: 24px;
+    transform: scaleY(1.1);
+    transform: rotate(20deg);
+  }
+
+  .navigation p {
+    font-size: 24px;
+  }
+
+  .footer-content h4 {
+    font-size: 24px;
+    color: #fdf7ff;
+    margin-right: 8px;
+  }
+
+  .footer-content p {
+    font-size: 24px;
+  }
+
+  .book-icon {
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+  /* Navigation */
+  .paddings {
+    padding: 16px 16px;
+  }
+
+  .book-card {
+    width: 75%;
+  }
+}
+
+/* 420px */
+@media (max-width: 420px) {
+  .price-overlay span {
+    font-size: 16px;
+  }
+
+  .like-overlay .like-button {
+    width: 16px;
+    height: 16px;
+  }
+}

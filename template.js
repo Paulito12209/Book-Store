@@ -40,13 +40,20 @@ function getBookTemplate(bookIndex) {
                      onclick="toggleLike(${bookIndex})"
                 />
               </div>
-            </div>
-              <div class="book-tags">
-                <span>${books[bookIndex].category}</span>
+
+              <!-- Preis oben link auf dem Bild -->
+              <div class="price-overlay">
+                <span>${books[bookIndex].price} €</span>
               </div>
+
+            </div>
+              
               <div class="book-info">
                 <div class="book-title">
                   <h2>${books[bookIndex].title}</h2>
+                </div>
+                <div class="book-tags">
+                  <span>${books[bookIndex].category}</span>
                 </div>
                 <div class="book-info-box-divider"></div>
                 <span>von ${books[bookIndex].author}</span>
@@ -56,10 +63,11 @@ function getBookTemplate(bookIndex) {
                 
                 <p>${books[bookIndex].summary}</p>
               </div>
-              <div class="book-info-box-divider"></div>
+              
             </div>
             
             <div class="book-interactions">
+            <div class="interactions-divider"></div>
               <div class="book-interactions-info">
                 <div class="book-likes">
                   <img src="assets/icons/heart-empty.png"
@@ -79,8 +87,9 @@ function getBookTemplate(bookIndex) {
                 </div>
               </div>
               <div class="comment-container">
-                  
-                  <article>
+                  <article class="comments-display">
+                    
+
                     <div id="comment-container" class="comment-box">
                       <input id="comment${bookIndex}" type="text" class="comment-input" placeholder="Schreib einen Kommentar...">
                       <button onclick="addComment(${bookIndex}) ">

@@ -35,6 +35,7 @@ main {
   height: 40px;
   margin-right: 8px;
 }
+
 .navigation h4 img:hover {
   height: 40px;
   transform: scaleY(1.1);
@@ -44,10 +45,6 @@ main {
 .navigation p {
   font-size: 40px;
   color: #577b97;
-}
-
-.navigation span {
-  font-size: 24px;
 }
 
 /* === BOOK GALLARY === */
@@ -121,6 +118,28 @@ section {
   display: block;
 }
 
+.price-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.price-overlay span {
+  color: #0c395c;
+  font-size: 20px;
+  margin: 0;
+}
+
+.price-overlay:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
 .book-title {
   height: 64px;
   display: flex;
@@ -156,6 +175,7 @@ section {
   font-size: 18px;
   color: #0c395c;
   font-stretch: normal;
+  margin-bottom: 8px;
 }
 
 .book-info span {
@@ -187,11 +207,13 @@ section {
   transition: all 0.5s ease;
   backdrop-filter: blur(10px);
   box-shadow: 0 24px 40px rgba(34, 48, 76, 0.15);
+  margin-bottom: 4px;
 }
 
 .book-tags span {
   color: #ec5e5c;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
   word-wrap: break-word;
 }
 
@@ -205,7 +227,14 @@ section {
   height: 1px;
   width: 100%;
   background-color: #7994a9;
-  margin: 8px 0 4px 0;
+  margin: 4px 0 4px 0;
+}
+
+.interactions-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #7994a9;
+  margin: 4px 0 12px 0;
 }
 
 .book-interactions {
@@ -217,7 +246,7 @@ section {
 .book-interactions-info {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
 }
 
 .book-likes {
@@ -256,7 +285,7 @@ section {
 
 .comment-container {
   background-color: #fdfefe;
-  padding: 12px;
+  padding: 16px 12px 8px 12px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 0 24px 40px rgba(34, 48, 76, 0.15);
@@ -265,6 +294,12 @@ section {
 .comment-box {
   display: flex;
   flex-direction: column;
+}
+
+.comments-display {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .comment-input {
@@ -301,13 +336,16 @@ section {
 }
 
 .comments-list {
-  margin-top: 12px;
+  padding: 8px;
+  margin-top: 8px;
+  word-wrap: break-word;
 }
 
 .new-comment {
   background: rgba(255, 255, 255, 0.7);
   color: #0c395c;
   font-size: 14px;
+  word-wrap: break-word;
 }
 
 .new-comment strong {
@@ -315,9 +353,11 @@ section {
 }
 
 .comment-input {
-  background-color: #eee4e5;
+  background-color: #f4efef;
   border: none;
   border-radius: 8px;
+  padding: 8px;
+  color: #0c395c;
 }
 
 /* === FOOTER === */
@@ -332,6 +372,11 @@ footer {
 }
 
 .footer-content h4 {
+  font-size: 40px;
+  color: #fdf7ff;
+}
+
+.footer-content p {
   font-size: 40px;
   color: #fdf7ff;
 }
