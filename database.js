@@ -54,7 +54,7 @@ let books = [
   },
   {
     id: 5,
-    image: "assets/img/die-7-wege-zur-effektivität.png",
+    image: "assets/img/die-7-wege-zur-effektivitaet.png",
     title: "Die 7 Wege zur Effektivität",
     author: "Stephen R. Covey",
     publisher: "GABAL Verlag",
