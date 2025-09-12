@@ -17,7 +17,7 @@ function renderBooks() {
 // === LIKE FUNKTION ===
 function toggleLike(bookIndex) {
   // Like-Status umschalten
-  books[bookIndex].liked = !books[bookIndex].liked;
+  books[bookIndex].liked = !books[bookIndex].liked; //Das ! bedeutet "das Gegenteil von"
   
   // Likes-Anzahl anpassen
   if (books[bookIndex].liked) {
