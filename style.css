@@ -300,6 +300,26 @@ section {
   height: 16px;
 }
 
+.comments-list {
+  margin-top: 12px;
+}
+
+.new-comment {
+  background: rgba(255, 255, 255, 0.7);
+  color: #0c395c;
+  font-size: 14px;
+}
+
+.new-comment strong {
+  color: #0c395c;
+}
+
+.comment-input {
+  background-color: #eee4e5;
+  border: none;
+  border-radius: 8px;
+}
+
 /* === FOOTER === */
 footer {
   background-color: #1e1927;

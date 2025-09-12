@@ -8,6 +8,20 @@ function getBookTemplate(bookIndex) {
     likeIcon = "assets/icons/heart-empty.png";
   }
 
+  let insertComments = "";
+  if (books[bookIndex].comments.length > 0) {
+    for (
+      let commentIndex = 0;
+      commentIndex < books[bookIndex].comments.length;
+      commentIndex++
+    ) {
+      insertComments += `<div class="new-comment">
+                          <strong>Paul:</strong> "${books[bookIndex].comments[commentIndex].comment}"
+                          </div>
+                        `;
+    }
+  }
+
   return `<div class="book-card">
             
             <div class="book-info-box">
@@ -67,17 +81,21 @@ function getBookTemplate(bookIndex) {
               <div class="comment-container">
                   
                   <article>
-                  <div id="comment-container" class="comment-box">
-                      <input id="" type="text" class="comment-input" placeholder="Schreib einen Kommentar...">
-                      <button onclick="addComment(bookIndex) ">
+                    <div id="comment-container" class="comment-box">
+                      <input id="comment${bookIndex}" type="text" class="comment-input" placeholder="Schreib einen Kommentar...">
+                      <button onclick="addComment(${bookIndex}) ">
                         <div class="comment-button-info">
-                          <img src="assets/icons/send-icon.png"
-                               class="send-icon"
-                          />
-                          Kommentar posten
+                        <img src="assets/icons/send-icon.png"
+                            class="send-icon"
+                        />
+                        Kommentar posten
                         </div>
                       </button>
-                  </div>
+                    </div>
+
+                    <div class="comments-List">
+                    ${insertComments}
+                    </div>
                   </article>
               </div>
             </div>

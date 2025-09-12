@@ -34,7 +34,8 @@ function addComment(bookIndex) {
   let commentInput= commentInputRef.value;
 
   if (commentInput.length > 0) {
-    books[bookIndex].comments.push({'comments': commentInput});
+    books[bookIndex].comments.push({'comment': commentInput});
+    commentInputRef.value = "";
   }
 
   renderBooks();
