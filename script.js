@@ -1,4 +1,3 @@
-
 // === Initial FUNKTION ===
 function init() {
   renderBooks();
@@ -18,14 +17,25 @@ function renderBooks() {
 function toggleLike(bookIndex) {
   // Like-Status umschalten
   books[bookIndex].liked = !books[bookIndex].liked; //Das ! bedeutet "das Gegenteil von"
-  
+
   // Likes-Anzahl anpassen
   if (books[bookIndex].liked) {
     books[bookIndex].likes = books[bookIndex].likes + 1;
   } else {
     books[bookIndex].likes = books[bookIndex].likes - 1;
   }
-  
+
   // Seite neu rendern damit die Änderungen sichtbar werden
+  renderBooks();
+}
+
+function addComment(bookIndex) {
+  let commentInputRef = document.getElementById("comment" + bookIndex);
+  let commentInput= commentInputRef.value;
+
+  if (commentInput.length > 0) {
+    books[bookIndex].comments.push({'comments': commentInput});
+  }
+
   renderBooks();
 }

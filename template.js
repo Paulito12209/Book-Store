@@ -59,8 +59,10 @@ function getBookTemplate(bookIndex) {
                   />
                   <span>Kommentare</span>
                 </div>
-                <div class="comment-box">
-                </div>
+                <article class="comment-container">
+                  <div id="comment-container" class="comment-box">
+                  </div>
+                </article>
               </div>
             </div>
           </div>
