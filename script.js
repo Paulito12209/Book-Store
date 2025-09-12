@@ -4,19 +4,28 @@ function init() {
   renderBooks();
 }
 
-let bookImagesIndex = 0;
-let bookIndex = 0;
-
-// === RENDER FUNKTIONEN ===
+// === RENDER FUNKTION ===
 function renderBooks() {
   let bookListRef = document.getElementById("book_container");
   bookListRef.innerHTML = "";
 
-  for (let bookImagesIndex = 0; bookImagesIndex < bookImages.length; bookImagesIndex++) {
-    bookListRef.innerHTML += getBookTemplate(bookImagesIndex);
+  for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
+    bookListRef.innerHTML += getBookTemplate(bookIndex);
   }
 }
 
-function renderInfos(){
-
+// === LIKE FUNKTION ===
+function toggleLike(bookIndex) {
+  // Like-Status umschalten
+  books[bookIndex].liked = !books[bookIndex].liked;
+  
+  // Likes-Anzahl anpassen
+  if (books[bookIndex].liked) {
+    books[bookIndex].likes = books[bookIndex].likes + 1;
+  } else {
+    books[bookIndex].likes = books[bookIndex].likes - 1;
+  }
+  
+  // Seite neu rendern damit die Änderungen sichtbar werden
+  renderBooks();
 }

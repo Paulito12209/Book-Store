@@ -86,6 +86,37 @@ section {
 .book-image-box {
   height: auto;
   width: 100%;
+  position: relative;
+}
+
+.like-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-overlay:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.like-overlay .like-button {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.book-title {
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .book-image {
@@ -113,8 +144,8 @@ section {
   gap: 4px;
 }
 
-.book-info h2 {
-  font-size: 24px;
+.book-card h2 {
+  font-size: 20px;
   color: #0c395c;
 }
 
@@ -131,10 +162,12 @@ section {
 
 .book-labels {
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: start;
   gap: 8px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .book-tags {
@@ -149,12 +182,20 @@ section {
 .book-tags span {
   color: #ec5e5c;
   font-size: 14px;
+  word-wrap: break-word;
+}
+
+.book-publisher span {
+  color: #577B97;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .book-info-box-divider {
   height: 1px;
   width: 100%;
   background-color: #7994a9;
+  margin: 8px 0;
 }
 
 .book-interactions {
@@ -167,6 +208,10 @@ section {
   display: flex;
   align-self: center;
   gap: 4px;
+}
+
+.book-likes img {
+  height: 16px;
 }
 
 .book-likes span {

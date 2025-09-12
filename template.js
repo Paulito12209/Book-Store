@@ -1,36 +1,55 @@
-// Template-Funktionen
-function getBookTemplate(bookImagesIndex) {
+// === Template-Funktionen ===
+function getBookTemplate(bookIndex) {
+  //   Einfache if/else Lösung für das Heart Icon
+  let likeIcon = "";
+  if (books[bookIndex].liked == true) {
+    likeIcon = "assets/icons/heart-filled.png";
+  } else {
+    likeIcon = "assets/icons/heart-empty.png";
+  }
+
   return `<div class="book-card">
             <div class="book-image-box">
-              <img src="${bookImages[bookImagesIndex]}"
+              <img src="${books[bookIndex].image}"
               class="book-image"
               alt=""
               title=""
               />
+              <!-- Like Button über dem Bild -->
+              <div class="like-overlay">
+                <img src="${likeIcon}"
+                     class="like-button"
+                     alt="Like Button"
+                     title="Like Button"
+                     onclick="toggleLike(${bookIndex})"
+                />
+              </div>
             </div>
             <div class="book-info-box">
-              <div class="book-info">
-                <h2>${books[bookIndex].title}</h2>
-                <span>von ${books[bookIndex].author}</span>
-                <p>${books[bookIndex].summary}</p>
+              <div class="book-tags">
+                <span>${books[bookIndex].category}</span>
               </div>
-              <div class="book-labels">
-                <div class="book-tags">
-                    <span>${books[bookIndex].category}</span>
+              <div class="book-info">
+                <div class="book-title">
+                  <h2>${books[bookIndex].title}</h2>
                 </div>
-                <div class="book-tags">
-                    <span>${books[bookIndex].publisher}</span>
+                <div class="book-info-box-divider"></div>
+                <span>von ${books[bookIndex].author}</span>
+                <div class="book-publisher">
+                  <span>${books[bookIndex].publisher}</span>
                 </div>
+                
+                <p>${books[bookIndex].summary}</p>
               </div>
               <div class="book-info-box-divider"></div>
               <div class="book-interactions">
                 <div class="book-likes">
                   <img src="assets/icons/heart-empty.png"
-                       class="like-button"
-                       alt="Like Button"
-                       title="Like Button"
+                       class="like-icon"
+                       alt="Like Icon"
+                       title="Like Icon"
                   />
-                  <span>${books[bookIndex].likes}</span>
+                  <span>${books[bookIndex].likes} Likes</span>
                 </div>
                 <div class="book-comment">
                   <img src="assets/icons/comment-icon.png"
