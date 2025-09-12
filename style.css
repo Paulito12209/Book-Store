@@ -83,6 +83,18 @@ section {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
+.book-card:hover {
+  height: auto;
+  width: 25%;
+  background: rgba(245, 251, 253, 0.8);
+  border-radius: 20px;
+  padding: 16px;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
 .book-image-box {
   height: auto;
   width: 100%;
@@ -113,7 +125,7 @@ section {
 }
 
 .book-title {
-  height: 72px;
+  height: 88px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -134,7 +146,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 8px 0px;
-  gap: 16px;
+  gap: 8px;
 }
 
 .book-info {
@@ -147,6 +159,7 @@ section {
 .book-card h2 {
   font-size: 20px;
   color: #0c395c;
+  font-stretch: normal;
 }
 
 .book-info span {
@@ -195,7 +208,7 @@ section {
   height: 1px;
   width: 100%;
   background-color: #7994a9;
-  margin: 8px 0;
+  margin: 8px 0 4px 0;
 }
 
 .book-interactions {
