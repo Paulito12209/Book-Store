@@ -1,6 +1,6 @@
 // === Template-Funktionen ===
 function getBookTemplate(bookIndex) {
-  //   Einfache if/else Lösung für das Heart Icon
+  //   Einfache if/else Lösung für das Like Icon
   let likeIcon = "";
   if (books[bookIndex].liked == true) {
     likeIcon = "assets/icons/heart-filled.png";
