@@ -122,7 +122,7 @@ section {
 }
 
 .book-title {
-  height: 88px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,19 +153,19 @@ section {
 }
 
 .book-card h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: #0c395c;
   font-stretch: normal;
 }
 
 .book-info span {
-  font-size: 18px;
+  font-size: 16px;
   color: #577b97;
   margin: 4px 0px 0px 0px;
 }
 
 .book-info p {
-  font-size: 16px;
+  font-size: 14px;
   color: #0c395c;
   margin-top: 8px;
 }
