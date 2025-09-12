@@ -9,6 +9,8 @@ function getBookTemplate(bookIndex) {
   }
 
   return `<div class="book-card">
+            
+            <div class="book-info-box">
             <div class="book-image-box">
               <img src="${books[bookIndex].image}"
               class="book-image"
@@ -25,7 +27,6 @@ function getBookTemplate(bookIndex) {
                 />
               </div>
             </div>
-            <div class="book-info-box">
               <div class="book-tags">
                 <span>${books[bookIndex].category}</span>
               </div>
@@ -42,7 +43,10 @@ function getBookTemplate(bookIndex) {
                 <p>${books[bookIndex].summary}</p>
               </div>
               <div class="book-info-box-divider"></div>
-              <div class="book-interactions">
+            </div>
+            
+            <div class="book-interactions">
+              <div class="book-interactions-info">
                 <div class="book-likes">
                   <img src="assets/icons/heart-empty.png"
                        class="like-icon"
@@ -59,10 +63,22 @@ function getBookTemplate(bookIndex) {
                   />
                   <span>Kommentare</span>
                 </div>
-                <article class="comment-container">
+              </div>
+              <div class="comment-container">
+                  
+                  <article>
                   <div id="comment-container" class="comment-box">
+                      <input id="" type="text" class="comment-input" placeholder="Schreib einen Kommentar...">
+                      <button onclick="addComment(bookIndex) ">
+                        <div class="comment-button-info">
+                          <img src="assets/icons/send-icon.png"
+                               class="send-icon"
+                          />
+                          Kommentar posten
+                        </div>
+                      </button>
                   </div>
-                </article>
+                  </article>
               </div>
             </div>
           </div>
